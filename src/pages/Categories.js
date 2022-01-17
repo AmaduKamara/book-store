@@ -1,9 +1,8 @@
 import React from 'react';
-import '../inxed.css';
 
 function Categories() {
   return (
-    <div className="container">
+    <div className="container mx-auto py-16 px-24">
       <h1>Under construction</h1>
     </div>
   );
