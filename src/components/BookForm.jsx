@@ -12,6 +12,7 @@ function BookForm() {
           type="text"
           placeholder="Book title"
           className="p-3 border rounded w-3/5 focus:outline-none"
+          required
         />
         <select name="category" className="p-3 border mx-4  w-1/5">
           <option value="" className="my-2">

@@ -1,5 +1,4 @@
 /* eslint-disable linebreak-style */
-// eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
 
 function Book({ title }) {
@@ -17,8 +16,7 @@ function Book({ title }) {
 }
 
 Book.propTypes = {
-  // eslint-disable-next-line react/require-default-props
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
 };
 
 export default Book;
