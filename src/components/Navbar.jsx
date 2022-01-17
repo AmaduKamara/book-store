@@ -5,13 +5,19 @@ import { Link } from 'react-router-dom';
 function Navbar() {
   return (
     <nav>
-      <Link to="/">Book Store</Link>
+      <Link to="/" exact>
+        Book Store
+      </Link>
       <ul>
         <li>
-          <Link to="/">BOOKS</Link>
+          <Link to="/" exact>
+            BOOKS
+          </Link>
         </li>
         <li>
-          <Link to="/categories">CATEGORIES</Link>
+          <Link to="/categories" exact>
+            CATEGORIES
+          </Link>
         </li>
       </ul>
     </nav>
