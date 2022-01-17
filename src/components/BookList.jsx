@@ -2,7 +2,7 @@
 import React from 'react';
 import Book from './Book';
 
-function Books() {
+function BookList() {
   return (
     <div>
       <Book />
@@ -10,4 +10,4 @@ function Books() {
   );
 }
 
-export default Books;
+export default BookList;
