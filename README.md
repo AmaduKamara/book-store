@@ -1,7 +1,7 @@
 # Book Store - app for storing and managing books
 
-In this project, I built a basic React Calculator App that allows Maths Magicians to perform basic mathematical calculations.
-I achieved that by using React, a JavaScript library for building user interfaces.
+In this project, I built a basic React Bookstore app to perform creation and deletion of books from the redux store.
+I achieved that by using React, a JavaScript library for building user interfaces, redux for state management and Tailwind CSS for styling the UI.
 
 #### Desktop Screenshot
 
@@ -58,6 +58,6 @@ Give a ⭐️ if you like this project!
 
 👍
 
-- Thanks to Microverse code reviewers for your reviews. Your reviews made my code better and enhanced the look of my capstone project.
+- Thanks to Microverse code reviewers for their reviews. Their reviews made my code better and enhanced the look of every project given.
 - Thanks to my coding partners for collaborating with me on this project, giving suggestions and support.
 - And most importantly, thanks, to Microverse for the opportunity given in making me a Professional remote Software developer. I am looking forward to becoming a great one.
