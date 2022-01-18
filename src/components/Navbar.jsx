@@ -10,7 +10,6 @@ function Navbar() {
         <div className="container mx-auto flex items-center">
           <Link
             to="/"
-            exact
             className="mr-16 uppercase text-sky-500 font-bold text-3xl"
           >
             Bookstore CMS
@@ -19,14 +18,13 @@ function Navbar() {
             <li className="mx-6 text-gray-500">
               <Link
                 to="/"
-                exact
                 className="text-gray-700 font-semibold uppercase"
               >
                 Books
               </Link>
             </li>
             <li className="mx-6 text-gray-500">
-              <Link to="/categories" exact className="uppercase">
+              <Link to="/categories" className="uppercase">
                 Categories
               </Link>
             </li>

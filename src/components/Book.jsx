@@ -1,37 +1,52 @@
 /* eslint-disable linebreak-style */
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 
-function Book({ title }) {
+import { removeBook } from '../redux/books/books';
+
+import Button from './ui/Button';
+
+function Book({ title, author, id }) {
+  const dispatch = useDispatch();
+
+  const handleBookRemoval = () => {
+    dispatch(removeBook({ id }));
+  };
+
   return (
-    <div className="my-5 p-6 border flex justify-between items-center">
+    <div className="my-5 p-4 border flex justify-between items-center">
       <div>
         <p className="text-gray-400 text-xl mb-1">Action</p>
-        <h2 className="text-2xl font-semibold">{title}</h2>
-        <h3 className="text-xl ">Author</h3>
+        <h2 className="text-4xl font-semibold">{title}</h2>
+        <h3 className="text-lg text-gray-500 mt-3">{author}</h3>
         <div>
-          <button type="button" className="mr-2 mt-2 text-sky-300 text-xl">
-            Comment
-          </button>
-          <button type="button" className="mx-2 mt-2 text-sky-300 text-xl">
-            Remove
-          </button>
-          <button type="button" className="mx-2 mt-2 text-sky-300 text-xl">
-            Edit
-          </button>
+          <Button
+            className="mr-2 mt-2 text-sky-300 text-xl hover:text-sky-600"
+            text="Comment"
+          />
+          <Button
+            className="mr-2 mt-2  text-xl text-sky-300 hover:text-red-400"
+            text="Remove"
+            handleClick={handleBookRemoval}
+          />
+          <Button
+            className="mr-2 mt-2 text-sky-300 text-xl hover:text-sky-600"
+            text="Edit"
+          />
         </div>
       </div>
-      <button
-        type="button"
-        className="py-3 px-16 rounded border border-red-400 hover:border-red-300 hover:bg-red-400 hover:text-white"
-      >
-        Remove
-      </button>
+      <Button
+        className="py-2 px-5 rounded border bg-sky-500 text-white hover:text-white uppercase"
+        text="Update Progress"
+      />
     </div>
   );
 }
 
 Book.propTypes = {
   title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default Book;
