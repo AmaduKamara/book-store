@@ -63,12 +63,6 @@ function BookForm() {
           <option value="cat2" className="my-2">
             Category 2
           </option>
-          <option value="cat3" className="my-2">
-            Category 3
-          </option>
-          <option value="cat4" className="my-2">
-            Category 4
-          </option>
         </select>
         <Button
           handleClick={submitBookHandler}
