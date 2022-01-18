@@ -4,7 +4,7 @@ import BookList from '../components/BookList';
 
 function Books() {
   return (
-    <div className="container mx-auto p-16 shadow-xl border rounded-md mt-24">
+    <div className="container mx-auto p-6 mb-10 shadow-xl border rounded-md mt-16">
       <BookList />
       <BookForm />
     </div>
