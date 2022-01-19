@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
 import BookForm from '../components/BookForm';
 import BookList from '../components/BookList';
