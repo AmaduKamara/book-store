@@ -3,27 +3,28 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuid } from 'uuid';
 
-import { addBook } from '../redux/books/books';
+import { sendBook } from '../redux/books/books';
 
 import Button from './ui/Button';
 
 function BookForm() {
   const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
 
   const dispatch = useDispatch();
 
   const submitBookHandler = () => {
     const newBook = {
       id: uuid(),
+      category,
       title,
-      author,
     };
 
-    dispatch(addBook(newBook));
-
-    setTitle('');
-    setAuthor('');
+    if (newBook.category || newBook.title) {
+      dispatch(sendBook(newBook));
+      setTitle('');
+      setCategory('');
+    }
   };
 
   return (
@@ -36,32 +37,45 @@ function BookForm() {
           <input
             type="text"
             placeholder="Book title"
-            className="p-3 border rounded focus:outline-none border-sky-500 w-2/3 mr-4"
-            required
+            className="p-3 border rounded focus:outline-none border-sky-500 w-full"
             onChange={(e) => setTitle(e.target.value)}
             value={title}
-          />
-          <input
-            type="text"
-            placeholder="Author"
-            className="p-3 border rounded focus:outline-none border-sky-500"
             required
-            onChange={(e) => setAuthor(e.target.value)}
-            value={author}
           />
         </div>
         <select
           name="category"
-          className="p-3 border mr-4  w-1/5 border-sky-500 rounded"
+          className="p-3 border mx-8  w-1/5 border-sky-500 rounded focus:outline-none"
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          required
         >
           <option value="" className="my-2">
-            Category
+            Select a category
           </option>
-          <option value="cat1" className="my-2">
-            Category 1
+          <option value="Technology" className="my-2">
+            Technology
           </option>
-          <option value="cat2" className="my-2">
-            Category 2
+          <option value="Science" className="my-2">
+            Science
+          </option>
+          <option value="Education" className="my-2">
+            Education
+          </option>
+          <option value="Business" className="my-2">
+            Business
+          </option>
+          <option value="Entertainment" className="my-2">
+            Entertainment
+          </option>
+          <option value="Action" className="my-2">
+            Action
+          </option>
+          <option value="Fiction" className="my-2">
+            Fiction
+          </option>
+          <option value="Other" className="my-2">
+            Other
           </option>
         </select>
         <Button
