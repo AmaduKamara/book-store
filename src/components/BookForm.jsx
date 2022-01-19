@@ -16,6 +16,7 @@ function BookForm() {
   const submitBookHandler = () => {
     const newBook = {
       id: uuid(),
+      category,
       title,
     };
 
@@ -64,6 +65,15 @@ function BookForm() {
           </option>
           <option value="Entertainment" className="my-2">
             Entertainment
+          </option>
+          <option value="Action" className="my-2">
+            Action
+          </option>
+          <option value="Fiction" className="my-2">
+            Fiction
+          </option>
+          <option value="Other" className="my-2">
+            Other
           </option>
         </select>
         <Button

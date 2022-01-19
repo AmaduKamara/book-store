@@ -6,7 +6,7 @@ import { removeBook } from '../redux/books/books';
 
 import Button from './ui/Button';
 
-function Book({ title, author, id }) {
+function Book({ title, category, id }) {
   const dispatch = useDispatch();
 
   const handleBookRemoval = () => {
@@ -16,9 +16,8 @@ function Book({ title, author, id }) {
   return (
     <div className="my-5 p-4 border flex justify-between items-center">
       <div>
-        <p className="text-gray-400 text-xl mb-1">Action</p>
+        <p className="text-gray-400 text-xl mb-1">{category}</p>
         <h2 className="text-4xl font-semibold">{title}</h2>
-        <h3 className="text-lg text-gray-500 mt-3">{author}</h3>
         <div>
           <Button
             className="mr-2 mt-2 text-sky-300 text-xl hover:text-sky-600"
@@ -44,9 +43,9 @@ function Book({ title, author, id }) {
 }
 
 Book.propTypes = {
-  title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default Book;

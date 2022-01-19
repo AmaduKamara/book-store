@@ -26,14 +26,6 @@ export const sendBook = (payload) => async (dispatch) => {
     title,
   };
 
-  // fetch(`${baseURL}/apps/LttD9eZf73PXhoftVKbz/books`, {
-  //   method: 'POST',
-  //   headers: {
-  //     contentType: 'application/json',
-  //   },
-  //   body: JSON.stringify(newBook),
-  // });
-
   await axios.post(`${baseURL}/apps/LttD9eZf73PXhoftVKbz/books`, newBook);
 
   dispatch(addBook(payload));
