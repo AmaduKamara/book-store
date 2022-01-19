@@ -20,10 +20,11 @@ function BookForm() {
       title,
     };
 
-    dispatch(sendBook(newBook));
-
-    setTitle('');
-    setCategory('');
+    if (newBook.category || newBook.title) {
+      dispatch(sendBook(newBook));
+      setTitle('');
+      setCategory('');
+    }
   };
 
   return (
@@ -37,9 +38,9 @@ function BookForm() {
             type="text"
             placeholder="Book title"
             className="p-3 border rounded focus:outline-none border-sky-500 w-full"
-            required
             onChange={(e) => setTitle(e.target.value)}
             value={title}
+            required
           />
         </div>
         <select
@@ -47,6 +48,7 @@ function BookForm() {
           className="p-3 border mx-8  w-1/5 border-sky-500 rounded focus:outline-none"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
+          required
         >
           <option value="" className="my-2">
             Select a category

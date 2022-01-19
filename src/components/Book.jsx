@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 
-import { removeBook } from '../redux/books/books';
+import { deleteBook } from '../redux/books/books';
 
 import Button from './ui/Button';
 
@@ -10,7 +10,7 @@ function Book({ title, category, id }) {
   const dispatch = useDispatch();
 
   const handleBookRemoval = () => {
-    dispatch(removeBook({ id }));
+    dispatch(deleteBook(id));
   };
 
   return (

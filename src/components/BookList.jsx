@@ -1,11 +1,19 @@
 /* eslint-disable linebreak-style */
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchBook } from '../redux/books/books';
 
 import Book from './Book';
 
 function BookList() {
-  const books = useSelector((state) => state.bookReducer);
+  const books = useSelector((state) => state.bookReducer.books);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchBook());
+  }, []);
+
   return (
     <div>
       {books.length ? (
@@ -14,7 +22,7 @@ function BookList() {
             id={book.id}
             key={book.id}
             title={book.title}
-            author={book.author}
+            category={book.category}
           />
         ))
       ) : (
