@@ -37,7 +37,7 @@ function BookForm() {
           <input
             type="text"
             placeholder="Book title"
-            className="p-2 md:p-4 border rounded focus:outline-none border-sky-500 w-full"
+            className="p-2 md:p-3 border rounded focus:outline-none border-sky-500 w-full"
             onChange={(e) => setTitle(e.target.value)}
             value={title}
             required
@@ -45,42 +45,42 @@ function BookForm() {
         </div>
         <select
           name="category"
-          className="p-2 text-sm md:text-lg md:p-4 px-3 border mx-2 md:mx-8 w-1/5 border-sky-500 rounded focus:outline-none"
+          className="text-sm md:text-lg md:p-3 border mx-2 md:mx-6 w-1/5 border-sky-500 rounded focus:outline-none"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
           required
         >
-          <option value="" className="my-2">
+          <option value="">
             Select a category
           </option>
-          <option value="Technology" className="my-2">
+          <option value="Technology">
             Technology
           </option>
-          <option value="Science" className="my-2">
+          <option value="Science">
             Science
           </option>
-          <option value="Education" className="my-2">
+          <option value="Education">
             Education
           </option>
-          <option value="Business" className="my-2">
+          <option value="Business">
             Business
           </option>
-          <option value="Entertainment" className="my-2">
+          <option value="Entertainment">
             Entertainment
           </option>
-          <option value="Action" className="my-2">
+          <option value="Action">
             Action
           </option>
-          <option value="Fiction" className="my-2">
+          <option value="Fiction">
             Fiction
           </option>
-          <option value="Other" className="my-2">
+          <option value="Other">
             Other
           </option>
         </select>
         <Button
           handleClick={submitBookHandler}
-          className="p-1 text-xs md:text-lg  md:py-4 px-2 md:px-8 rounded border bg-sky-500 text-white hover:text-white uppercase focus:outline-sky-700"
+          className="p-1 text-xs md:text-lg px-2 md:px-10 rounded border bg-sky-500 text-white hover:text-white uppercase focus:outline-sky-700"
           text="Add Book"
         />
       </div>

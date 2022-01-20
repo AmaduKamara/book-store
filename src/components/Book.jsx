@@ -54,7 +54,7 @@ function Book({ title, category, id }) {
           </div>
         </div>
       </div>
-      <div className="w-2/6 flex justify-end">
+      <div className="w-2/6 flex justify-center">
         <div>
           <p className="text-xs text-gray-400 uppercase">Current Chapter</p>
           <p className="text-lg py-2">
