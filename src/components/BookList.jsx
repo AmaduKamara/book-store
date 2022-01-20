@@ -15,7 +15,7 @@ function BookList() {
   }, []);
 
   return (
-    <div>
+    <div className="mb-10">
       {books.length ? (
         books.map((book) => (
           <Book

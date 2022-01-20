@@ -28,8 +28,8 @@ function BookForm() {
   };
 
   return (
-    <form className="my-5 w-full">
-      <h3 className="text-2xl uppercase font-semibold text-gray-400 my-3">
+    <form className="my-8 w-full">
+      <h3 className="md:text-2xl uppercase font-semibold text-gray-400 my-3">
         Add New Book
       </h3>
       <div className="flex">
@@ -37,7 +37,7 @@ function BookForm() {
           <input
             type="text"
             placeholder="Book title"
-            className="p-3 border rounded focus:outline-none border-sky-500 w-full"
+            className="p-2 md:p-3 border rounded focus:outline-none border-sky-500 w-full"
             onChange={(e) => setTitle(e.target.value)}
             value={title}
             required
@@ -45,42 +45,42 @@ function BookForm() {
         </div>
         <select
           name="category"
-          className="p-3 border mx-8  w-1/5 border-sky-500 rounded focus:outline-none"
+          className="text-sm md:text-lg md:p-3 border mx-2 md:mx-6 w-1/5 border-sky-500 rounded focus:outline-none"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
           required
         >
-          <option value="" className="my-2">
+          <option value="">
             Select a category
           </option>
-          <option value="Technology" className="my-2">
+          <option value="Technology">
             Technology
           </option>
-          <option value="Science" className="my-2">
+          <option value="Science">
             Science
           </option>
-          <option value="Education" className="my-2">
+          <option value="Education">
             Education
           </option>
-          <option value="Business" className="my-2">
+          <option value="Business">
             Business
           </option>
-          <option value="Entertainment" className="my-2">
+          <option value="Entertainment">
             Entertainment
           </option>
-          <option value="Action" className="my-2">
+          <option value="Action">
             Action
           </option>
-          <option value="Fiction" className="my-2">
+          <option value="Fiction">
             Fiction
           </option>
-          <option value="Other" className="my-2">
+          <option value="Other">
             Other
           </option>
         </select>
         <Button
           handleClick={submitBookHandler}
-          className="py-3 px-16 rounded border bg-sky-500 text-white hover:text-white uppercase"
+          className="p-1 text-xs md:text-lg px-2 md:px-10 rounded border bg-sky-500 text-white hover:text-white uppercase focus:outline-sky-700"
           text="Add Book"
         />
       </div>
