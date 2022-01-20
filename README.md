@@ -5,7 +5,7 @@ I achieved that by using React, a JavaScript library for building user interface
 
 #### Desktop Screenshot
 
-#### Mobile Screenshot
+![image](https://user-images.githubusercontent.com/50941074/150334789-c32cd586-7a92-407e-8a66-124dc4e0e85a.png)
 
 ## Built With
 
@@ -21,7 +21,7 @@ I achieved that by using React, a JavaScript library for building user interface
 
 ## Live Demo
 
-<a href="">Boot Store - Live Demo</a>
+<a href="https://amkam-bookstore.netlify.app/">Boot Store - Live Demo</a>
 
 ## Getting Started
 
